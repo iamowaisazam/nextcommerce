@@ -55,9 +55,11 @@ const Footer = () => {
                     <div className="row mb-n7">
                         <div className="col-lg-4 col-sm-6 mb-7">
                         <div className="footer-widget">
-                            <a className="footer-logo mb-8" href="index.html">
-                            <img src="/images/logo/logo.jpg" alt="footer-logo" />
+                            <Link href="/" >
+                             <a className="footer-logo mb-8" >
+                               <img src="/images/logo/logo.jpg" alt="footer-logo" />
                             </a>
+                            </Link>
                             <p>
                             We are a team of designers and developers that create high quality
                             Magento, Prestashop, Opencart.
