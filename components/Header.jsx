@@ -38,7 +38,7 @@ const Header = () => {
           <div className="container">
             <div className="row">
               <div className="col-12 col-sm-6">
-                <p>Email: <a className="header-top-link" href="www.owaisazamtechnical.com">iamowaisazam@gmail.com  </a></p>
+                <p>Email: <a className="header-top-link" aria-disabled={false} >test@gmail.com  </a></p>
                 <p>Free Shipping for all Order of $99</p>
               </div>
               <div className="col-12 col-sm-6">

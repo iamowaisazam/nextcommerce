@@ -1,8 +1,38 @@
+import axios from 'axios';
 import Head from 'next/head'
 import Link from 'next/link'
 
 
-export default function Login() {
+export default function Login(props) {
+
+
+    const  handle = async (e) => {
+       
+      e.preventDefault();
+      
+      let auth = {
+          email:e.target.email.value,
+          password:e.target.password.value,
+      };
+
+      axios({ 
+          method: 'post',
+          url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/login`,
+          data: auth,
+          responseType: 'json'
+       }).then(function (response) {
+           console.log(response.data);
+      })
+      .catch(function (error) {
+        let errormessage = error.response.data.message; 
+        if(errormessage != undefined){
+            alert(errormessage)
+         }
+        
+      });
+      
+ 
+}
   return (<>
 
       <Head>
@@ -30,16 +60,16 @@ export default function Login() {
                     <div className="login-register-wrapper">
                         <div className="login-form-container">
                             <div className="login-register-form">
-                                <form action="#" method="post">
-                                    <input type="text" name="user-name" placeholder="Email" />
-                                    <input type="text" name="user-password" placeholder="Password" />
+                                <form onSubmit={handle} >
+                                    <input required type="email" name="email" placeholder="Email" />
+                                    <input required type="password" name="password" placeholder="Password" />
                                     <div className="button-box">
                                         <div className="login-toggle-btn">
                                            <Link href="/forget-password">Forgot Password?</Link>
                                         </div>
-                                        <a href="#" className="btn btn-warning btn-hover-primary">
-                                        <span>Submit</span>
-                                        </a>
+                                        <button type="submit" className="btn btn-warning btn-hover-primary">
+                                          <span>Submit</span>
+                                        </button>
                                     </div>
                                 </form>
                             </div>

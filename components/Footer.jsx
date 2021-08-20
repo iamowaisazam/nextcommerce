@@ -1,17 +1,15 @@
 import React from 'react'
 import {toast} from 'react-toastify';
-
+import Link from 'next/link';
 
 const Footer = () => {
-
 
   const submit = (e) => {
       
     e.preventDefault();
-
-    document.querySelector(".newform").reset();
+    e.target.email.value = "";
     toast.success("Successfully Subscribed");
-}
+ }
 
     return (
         <>
@@ -55,63 +53,55 @@ const Footer = () => {
                     <div className="row mb-n7">
                         <div className="col-lg-4 col-sm-6 mb-7">
                         <div className="footer-widget">
-                            <Link href="/" >
-                             <a className="footer-logo mb-8" >
-                               <img src="/images/logo/logo.jpg" alt="footer-logo" />
-                            </a>
-                            </Link>
-                            <p>
-                            We are a team of designers and developers that create high quality
-                            Magento, Prestashop, Opencart.
-                            </p>
-                            <ul className="adress">
-                            <li><span className="text-dark fw-500">Address:</span> 4710-4890 Breckinridge St,Fayetteville</li>
-                            <li><span className="text-dark fw-500">Email:</span> <a href="mailto:support@hasthemes.com">support@hasthemes.com</a></li>
-                            </ul>
+                        <Link href="/" ><a className="footer-logo mb-8" ><img src="/images/logo/logo.jpg" /></a></Link>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                          <ul className="adress">
+                          <li><span className="text-dark fw-500">Address:</span> 4710-4890 Breckinridge St,Fayetteville</li>
+                          <li><span className="text-dark fw-500">Email:</span> <a aria-disabled={true} >support@test.com</a></li>
+                          </ul>
                         </div>
                         </div>
                         <div className="col-lg-3 col-sm-6 mb-7">
                         <div className="footer-widget">
-                            <h4 className="title">Products</h4>
+                            <h4 className="title">Top Rated Products</h4>
                             <ul className="footer-menu">
-                            <li><a className="footer-link" href="#">Prices drop</a></li>
-                            <li><a className="footer-link" href="#">New products</a></li>
-                            <li><a className="footer-link" href="#">Best sales</a></li>
-                            <li><a className="footer-link" href="#">Blog Post</a></li>
-                            <li><a className="footer-link" href="#">Contact us</a></li>
-                            <li><a className="footer-link" href="#">Sitemap</a></li>
+                              <li><Link href="/products/milk" ><a className="footer-link" >Product 1</a></Link> </li>
+                              <li><Link href="/products/product-2" ><a className="footer-link" >Product 2</a></Link></li>
+                              <li><Link href="/products/product-3" ><a className="footer-link" >Product 3</a></Link></li>
+                              <li><Link href="/products/product-4" ><a className="footer-link" >Product 4</a></Link></li>
+                              <li><Link href="/products/product-5" ><a className="footer-link" >Product 5</a></Link></li>
                             </ul>
                         </div>
                         </div>
                         <div className="col-lg-3 col-sm-6 mb-7">
-                        <div className="footer-widget">
-                            <h4 className="title">Our company</h4>
-                            <ul className="footer-menu">
-                            <li><a className="footer-link" href="#">Delivery</a></li>
-                            <li><a className="footer-link" href="#">Legal Notice</a></li>
-                            <li><a className="footer-link" href="#">About us</a></li>
-                            <li><a className="footer-link" href="#">Secure payment</a></li>
-                            <li><a className="footer-link" href="#">Prices drop</a></li>
-                            </ul>
-                        </div>
+                          <div className="footer-widget">
+                              <h4 className="title">Our company</h4>
+                              <ul className="footer-menu">
+                              <li><Link href="/products" ><a className="footer-link" >Products</a></Link></li>
+                              <li><Link href="/contact" ><a className="footer-link" >Contact</a></Link></li>
+                              <li><Link href="/cart" ><a className="footer-link" >Cart</a></Link></li>
+                              <li><Link href="/privacy-policy" ><a className="footer-link" >Privacy Policy</a></Link></li>
+                              <li><Link href="/terms-condition" ><a className="footer-link" >Terms and Conditon</a></Link></li>
+                              </ul>
+                          </div>
                         </div>
                         <div className="col-lg-2 col-sm-6 mb-7">
-                        <div className="footer-widget">
-                            <h4 className="title">Your account</h4>
-                            <ul className="footer-menu">
-                            <li><a className="footer-link" href="#">Personal info</a></li>
-                            <li><a className="footer-link" href="#">Orders</a></li>
-                            <li><a className="footer-link" href="#">Credit slips</a></li>
-                            <li><a className="footer-link" href="#">Addresses</a></li>
-                            <li><a className="footer-link" href="#">My wishlists</a></li>
-                            </ul>
+                          <div className="footer-widget">
+                              <h4 className="title">Your account</h4>
+                              <ul className="footer-menu">
+                              <li><a className="footer-link" href="#">Personal info</a></li>
+                              <li><a className="footer-link" href="#">Orders</a></li>
+                              <li><a className="footer-link" href="#">Credit slips</a></li>
+                              <li><a className="footer-link" href="#">Addresses</a></li>
+                              <li><a className="footer-link" href="#">My wishlists</a></li>
+                              </ul>
+                          </div>
                         </div>
-                        </div>
+                      </div>
                     </div>
-                    </div>
+                  </div>
                 </div>
-                </div>
-            </div>
+              </div>
             </div>
             {/* coppy right satrt */}
             <div className="copy-right-section">
@@ -119,9 +109,7 @@ const Footer = () => {
                   <div className="row">
                     <div className="col-md-6 order-last order-md-first">
                         <div className="copyright-info text-center text-md-start">
-                        <p>
-                            Copyright © 
-                            <a href="www.iamowaisazamtechnical.com">OwaisAzamTechnical</a>, All Rights Reserved
+                        <p> Copyright © <a aria-disabled={true}> OwaisAzamTechnical</a>, All Rights Reserved
                         </p>
                         </div>
                     </div>

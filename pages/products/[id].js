@@ -137,14 +137,14 @@ export default function Product({product}) {
                     <div className="container wrapper">
                     <div className="row">
                         <div className="col-12">
-                        <ul className="nav nav-tabs single-product-tab justify-content-center" id="myTab" role="tablist">
-                            <li className="nav-item" role="presentation">
-                            <a className="nav-link" data-bs-toggle="tab" href="#description" role="tab">Description</a>
-                            </li>
-                            <li className="nav-item" role="presentation">
-                            <a className="nav-link active" data-bs-toggle="tab" href="#productdetails" role="tab">Features</a>
-                            </li>
-                        </ul>
+                            <ul className="nav nav-tabs single-product-tab justify-content-center" id="myTab" role="tablist">
+                                <li className="nav-item" role="presentation">
+                                  <a className="nav-link" data-bs-toggle="tab" href="#description" role="tab">Description</a>
+                                </li>
+                                <li className="nav-item" role="presentation">
+                                  <a className="nav-link active" data-bs-toggle="tab" href="#productdetails" role="tab">Features</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div className="tab-content" id="myTabContent">

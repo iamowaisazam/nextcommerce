@@ -1,8 +1,7 @@
 import "../styles/globals.css";
 import Layout from "../components/Layout";
-import {Provider} from '../store/context';
 import store from '../store/index';
-import {Provider as PP } from 'react-redux';
+import {Provider } from 'react-redux';
 
 import NProgress from 'nprogress';
 import { ToastContainer, toast } from 'react-toastify';
@@ -30,16 +29,17 @@ Router.onRouteChangeError = url => {
 }
 
 function MyApp({ Component, pageProps }) {
-  return (<Provider>
-              <PP store={store} >
+
+  return (
+          <Provider store={store} >
                 <Layout>
                     <div className="">
                       <Component {...pageProps} />
                     </div>
                     <ToastContainer autoClose={2000}/>
                 </Layout>
-             </PP>
-        </Provider>);
+          </Provider>
+        );
 }
 
 export default MyApp;
