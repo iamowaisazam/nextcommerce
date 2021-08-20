@@ -4,8 +4,6 @@ import Link from 'next/link'
 
 
 export default function Login(props) {
-
-
     const  handle = async (e) => {
        
       e.preventDefault();
@@ -26,6 +24,8 @@ export default function Login(props) {
       .catch(function (error) {
         let errormessage = error.response.data.message; 
         if(errormessage != undefined){
+
+
             alert(errormessage)
          }
         
@@ -36,7 +36,7 @@ export default function Login(props) {
   return (<>
 
       <Head>
-        <title>Login</title>
+        <title>Loginn</title>
       </Head>
       <main >
          <div>
